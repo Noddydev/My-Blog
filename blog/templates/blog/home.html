@@ -1,0 +1,17 @@
+{% extends 'blog/Base.html' %}
+{% block test %}
+{% if title %}
+         <title>{{ title }}Truba Bhopal</title>
+{% else %}
+         <title> Welcome to Truba</title>
+{% endif %}
+{% endblock test %}		 
+{% block content %}
+<h2>Blogs</h2>
+{% for i in posts %}
+<h2><a href="{% url 'post-detail' i.id %}"{{i.title}}</a></h2>
+<p>{{ i.content }}</p>
+<p>By {{ i.author }}, posted on {{ i.date_posted }}</p>
+<hr/>
+{% endfor %}
+{% endblock content %}

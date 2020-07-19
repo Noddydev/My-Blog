@@ -1,0 +1,21 @@
+body
+{
+background-color:DarkSalmon;}
+# top{ border-bottom:3px dashed;
+           height:100px;
+           padding-top:40px;
+          text-align:center;}
+#menu{padding:10px}
+#menu a{color:Black; margin-left:30px;}
+#left{
+           background-color:lawngreen;
+           width:70%;
+           height:800px;
+           float:left;
+}
+#right{
+          background-color:green;
+          width:20% ; 
+          height:700px;
+          float:left;
+}

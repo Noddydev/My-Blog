@@ -1,0 +1,19 @@
+{% extenda 'blog/Base.html' %}
+{% block test %}
+{% endblock test %}
+
+
+		 
+{% block content %}
+<h3>Blog Removal Page</h3>
+<form method="POST">
+		{% csrf_token %}
+		<fieldset>
+				<legend>Delete A Post</legend>
+				<h2>Are You Sure You Want To Delete This Post:</h2>
+				<p>{{ object.title }}</p>
+				<button type="submit">Delete>></button>
+		</fieldset>		
+		<a href="{% url 'post-detail' object.id %}">Cancel</a>
+</form>
+{% endblock content %}

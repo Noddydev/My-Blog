@@ -1,0 +1,25 @@
+{% extends 'blog/Base.html' %}
+{% block test %}
+{% if title %}
+         <title>{{ title }}Truba Bhopal</title>
+{% else %}
+         <title> Welcome to Truba</title>
+{% endif %}
+{% endblock test %}		
+ 
+{% block content %}
+<h3>User Login Page</h3>
+<form method="POST">
+              {% csrf_token %}
+			  <fieldset>
+			           <legend>Login</legend>
+					   {{ form.as_p }}
+			  </fieldset>
+             <button type="submit">Sign In</button>
+				<fieldset>
+					<legend>Need An Account</legend>
+					<p>Create An Account Today...</p>
+					<p><a href="{% url 'register' %}">Sign Up</a>
+				</fieldset>	
+</form>
+{% endblock content %}

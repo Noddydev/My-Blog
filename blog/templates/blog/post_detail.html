@@ -1,0 +1,17 @@
+{% extends 'blog/Base.html' %}
+{% block test %}
+{% if title %}
+         <title>{{ title }}Truba Bhopal</title>
+{% else %}
+         <title> Welcome to Truba</title>
+{% endif %}
+{% endblock test %}		 
+{% block content %}
+<h2>Blogs</h2>
+<img src="{{ object.author.profile.image.url }}"
+<h2>{{object.title}}</h2>
+<p>{{ object.content }}</p>
+<p>By {{ object.author }},posted on {{ object.date_posted }}</p>
+<hr/>
+
+{% endblock content %}

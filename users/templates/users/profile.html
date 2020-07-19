@@ -1,0 +1,13 @@
+{% extends 'blog/Base.html' %}
+{% block test %}
+{% if title %}
+         <title>{{ title }}Truba Bhopal</title>
+{% else %}
+         <title> Welcome to Truba</title>
+{% endif %}
+{% endblock test %}
+
+{% block content %}
+<h3>{{ user.username }}'s profile</h3>
+<img style="border-radius:400px;" src="{{ user.profile.image.url }}" width:"600px" length:"600px" >
+{% endblock content %}
